@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+let phone = localStorage.getItem("phone");
+
+if (!phone) {
+    phone = prompt("הכנס את מספר הטלפון שלך:");
+    if (phone) {
+        localStorage.setItem("phone", phone);
+    }
+}
+
+if (phone) {
+    const msg =
+`from: ${phone}
+to: T6.B`;
+
+    window.location.href =
+    "https://wa.me/972543338817?text=" +
+    encodeURIComponent(msg);
+}
+
+</script>
+
+</body>
+</html>
